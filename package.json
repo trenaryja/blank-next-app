@@ -9,23 +9,23 @@
 		"lint": "eslint .",
 		"check": "tsc && pnpm lint && pnpm format -c && pnpm build",
 		"format": "prettier -w . !\"pnpm-lock.yaml\"",
-		"get-latest": "pnpm up -L -i -r"
+		"get-latest": "pnpm up -L -i -r",
+		"reinstall": "rm -rf node_modules && rm pnpm-lock.yaml && pnpm install"
 	},
 	"dependencies": {
 		"daisyui": "^5",
-		"next": "^15",
+		"next": "^16",
 		"next-themes": "^0.4.6",
 		"react": "^19",
 		"react-dom": "^19"
 	},
 	"devDependencies": {
-		"@eslint/eslintrc": "^3",
 		"@tailwindcss/postcss": "^4",
 		"@types/node": "^24",
 		"@types/react": "^19",
 		"@types/react-dom": "^19",
 		"eslint": "^9",
-		"eslint-config-next": "^15",
+		"eslint-config-next": "^16",
 		"prettier": "^3",
 		"tailwindcss": "^4",
 		"typescript": "^5"
