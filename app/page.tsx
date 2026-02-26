@@ -1,10 +1,10 @@
-import { CurrentTime } from './client'
+import { ThemePicker } from '@trenaryja/ui'
 
-export default async function Home() {
+export default function Home() {
 	return (
-		<main className='grid place-items-center content-center gap-4 h-screen'>
-			<h1 className='text-9xl'>Hello World</h1>
-			<CurrentTime />
+		<main className='grid h-screen place-items-center content-center gap-4'>
+			<h1 className='text-4xl font-bold'>Hello World</h1>
+			<ThemePicker />
 		</main>
 	)
 }

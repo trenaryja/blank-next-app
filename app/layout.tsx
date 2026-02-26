@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import { ThemeProvider } from 'next-themes'
+
+import { ThemeProvider } from '@trenaryja/ui'
 
 import './globals.css'
 
@@ -7,7 +8,7 @@ export const metadata: Metadata = {
 	title: 'Blank Next App',
 }
 
-export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
 	return (
 		<html suppressHydrationWarning lang='en'>
 			<body>

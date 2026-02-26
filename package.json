@@ -7,36 +7,35 @@
 		"build": "next build",
 		"start": "next start",
 		"lint": "eslint .",
-		"check": "tsc && pnpm lint && pnpm format -c && pnpm build",
-		"format": "prettier -w . !\"pnpm-lock.yaml\"",
-		"get-latest": "pnpm up -L -i -r",
-		"reinstall": "rm -rf node_modules && rm pnpm-lock.yaml && pnpm install"
+		"format": "prettier . -w",
+		"fix": "bun run format && bun run lint --fix",
+		"check": "tsc && bun run format -c && bun run lint && bun run build",
+		"get-latest": "bun update --latest --interactive",
+		"reinstall": "rm -rf node_modules bun.lock && bun install"
 	},
 	"dependencies": {
-		"daisyui": "^5",
+		"@trenaryja/ui": "^0.0.1-0",
 		"next": "^16",
-		"next-themes": "^0.4.6",
 		"react": "^19",
 		"react-dom": "^19"
 	},
 	"devDependencies": {
+		"@fullstacksjs/eslint-config": "^14",
 		"@tailwindcss/postcss": "^4",
 		"@types/node": "^25",
 		"@types/react": "^19",
 		"@types/react-dom": "^19",
-		"eslint": "^9",
-		"eslint-config-next": "^16",
+		"daisyui": "^5",
+		"eslint": "^10",
 		"prettier": "^3",
 		"tailwindcss": "^4",
 		"typescript": "^5"
 	},
-	"pnpm": {
-		"onlyBuiltDependencies": [
-			"@tailwindcss/oxide",
-			"sharp",
-			"unrs-resolver"
-		]
-	},
+	"trustedDependencies": [
+		"esbuild",
+		"sharp",
+		"unrs-resolver"
+	],
 	"prettier": {
 		"semi": false,
 		"singleQuote": true,
