@@ -1,6 +1,5 @@
-import type { Metadata } from 'next'
-
 import { ThemeProvider } from '@trenaryja/ui'
+import type { Metadata } from 'next'
 
 import './globals.css'
 

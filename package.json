@@ -6,10 +6,8 @@
 		"dev": "next dev --turbo",
 		"build": "next build",
 		"start": "next start",
-		"lint": "eslint .",
-		"format": "prettier . -w",
-		"fix": "bun run format && bun run lint --fix",
-		"check": "tsc && bun run format -c && bun run lint && bun run build",
+		"lint": "biome check --write .",
+		"check": "tsc && biome check . && bun run build",
 		"get-latest": "bun update --latest --interactive",
 		"reinstall": "rm -rf node_modules bun.lock && bun install"
 	},
@@ -20,29 +18,20 @@
 		"react-dom": "^19"
 	},
 	"devDependencies": {
-		"@fullstacksjs/eslint-config": "^14",
+		"@biomejs/biome": "^2",
 		"@tailwindcss/postcss": "^4",
 		"@types/node": "^25",
 		"@types/react": "^19",
 		"@types/react-dom": "^19",
 		"daisyui": "^5",
-		"eslint": "^10",
-		"prettier": "^3",
 		"tailwindcss": "^4",
-		"typescript": "^5"
+		"typescript": "^6"
 	},
 	"trustedDependencies": [
 		"esbuild",
 		"sharp",
 		"unrs-resolver"
 	],
-	"prettier": {
-		"semi": false,
-		"singleQuote": true,
-		"printWidth": 120,
-		"jsxSingleQuote": true,
-		"useTabs": true
-	},
 	"postcss": {
 		"plugins": {
 			"@tailwindcss/postcss": {}
