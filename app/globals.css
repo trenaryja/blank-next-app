@@ -2,4 +2,3 @@
 @import '@trenaryja/ui/css';
 @source '../node_modules/@trenaryja/ui';
 @plugin 'daisyui';
-@import 'tw-animate-css';
