@@ -1,6 +1,6 @@
 {
 	"extends": "@trenaryja/config/tsconfig/next",
 	"compilerOptions": {
-		"paths": { "@/*": ["./*"] }
+		"paths": { "@/*": ["./src/*"] }
 	}
 }

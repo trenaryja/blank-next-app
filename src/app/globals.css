@@ -1,4 +1,4 @@
 @import 'tailwindcss';
 @import '@trenaryja/ui/css';
-@source '../node_modules/@trenaryja/ui';
+@source '../../node_modules/@trenaryja/ui';
 @plugin 'daisyui';
