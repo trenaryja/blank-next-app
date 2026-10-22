@@ -3,14 +3,15 @@
 	"version": "0.1.0",
 	"private": true,
 	"scripts": {
-		"dev": "next dev --turbo",
 		"build": "next build",
-		"start": "next start",
-		"fix": "prettier -w . && eslint --fix .",
-		"check": "rm -rf .next && tsc && prettier -c . && eslint . --max-warnings=0 && bun run build",
+		"chk": "rm -rf .next && bun check && bun fmt --check && eslint . --max-warnings=0 && bun run build",
+		"dev": "next dev --turbo",
+		"fix": "bun fmt && eslint --fix .",
 		"get-latest": "bun update --latest --interactive",
-		"reinstall": "rm -rf node_modules bun.lock && bun install"
+		"reinstall": "rm -rf node_modules bun.lock && bun install",
+		"start": "next start"
 	},
+	"prettier": "@trenaryja/config/prettier",
 	"dependencies": {
 		"@t3-oss/env-nextjs": "^0.13.11",
 		"@trenaryja/ui": "^0.0.1-37",
@@ -21,20 +22,19 @@
 	},
 	"devDependencies": {
 		"@tailwindcss/postcss": "^4.3.3",
-		"@trenaryja/config": "^0.0.8",
+		"@trenaryja/config": "^0.2.0",
 		"@types/react": "^19.2.18",
 		"daisyui": "^5.7.25",
 		"tailwindcss": "^4.3.3"
 	},
-	"prettier": "@trenaryja/config/prettier",
-	"trustedDependencies": [
-		"esbuild",
-		"sharp",
-		"unrs-resolver"
-	],
 	"postcss": {
 		"plugins": {
 			"@tailwindcss/postcss": {}
 		}
-	}
+	},
+	"trustedDependencies": [
+		"esbuild",
+		"sharp",
+		"unrs-resolver"
+	]
 }
